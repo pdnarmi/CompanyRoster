@@ -1,0 +1,26 @@
+{
+  "name": "companyroster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdnarmi/CompanyRoster.git"
+  },
+  "author": "Patrick Narmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdnarmi/CompanyRoster/issues"
+  },
+  "homepage": "https://github.com/pdnarmi/CompanyRoster#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
