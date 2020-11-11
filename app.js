@@ -32,7 +32,6 @@ const newTeam = ()=>{
     ]).then(answers =>{
         team.push(new Manager(answers.manName, answers.manID, answers.manEmail, answers.officeNum));
         
-        console.log(team);
 
         newEmployee();
     })
@@ -79,9 +78,6 @@ const addIntern = ()=>{
     ]).then(answers => {
         team.push(new Intern(answers.intName, answers.intEmail, answers.intID, answers.intSchool));
 
-        console.log(team);
-        console.log(team[0].officeNumber)
-
         newEmployee();
     });
 };
@@ -106,8 +102,6 @@ const addEngineer = ()=>{
         }
     ]).then(answers => {
         team.push(new Engineer(answers.engName, answers.engEmail, answers.engID, answers.engGit));
-
-        console.log(team);
 
         newEmployee();
     });
@@ -138,7 +132,7 @@ const generateHTML = ()=>{
         if(team[i] instanceof Manager){
             output.push(` 
             <div class="card" id = "manager" style= "padding: 16px; text-align: center">
-            <img src="safari.jpg" alt="safari" style="width: 250px;">
+            <img src="https://i.ibb.co/YcjN1q6/manager.png" alt="manager">
             <p>Name:${team[i].name}</p>
             <p>ID:${team[i].id}</p>
             <p>E-mail:${team[i].email}</p>
@@ -147,7 +141,7 @@ const generateHTML = ()=>{
           </div>`);
         } else if(team[i] instanceof Intern){
             output.push(`<div class="card" id = "intern">
-            <img src="safari.jpg" alt="safari" style="width: 250px;">
+            <img src="https://i.ibb.co/84Yx2by/rsz-pencil.png" alt="intern">
             <p>Name:${team[i].name}</p>
             <p>ID:${team[i].id}</p>
             <p>E-mail:${team[i].email}</p>
@@ -156,7 +150,7 @@ const generateHTML = ()=>{
           </div>`)
         } else if(team[i] instanceof Engineer){
             output.push(`<div class="card" id = "engineer">
-            <img src="safari.jpg" alt="safari" style="width: 250px;">
+            <img src="https://i.ibb.co/zXyVG6h/rsz-1images.jpg" alt="engineer">
             <p>Name:${team[i].name}</p>
             <p>ID:${team[i].id}</p>
             <p>E-mail:${team[i].email}</p>
